@@ -4,7 +4,7 @@
 
 url: http://damian-sowers.github.io
 title: AppRaptor
-subtitle: The blog of Damian Sowers.
+subtitle: Coding and errata
 author: Damian Sowers
 simple_search: http://google.com/search
 description:
@@ -64,7 +64,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user: "3solarmasses"
+twitter_user: solarmasses
 twitter_tweet_button: true
 
 # Google +1
@@ -85,7 +85,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: "appraptorblog"
+disqus_short_name: appraptorblog
 disqus_show_comment_count: false
 
 # Google Analytics
