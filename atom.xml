@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[AppRaptor Blog]]></title>
+  <title><![CDATA[Damian Sowers]]></title>
   <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
   <link href="http://blog.appraptor.com/"/>
-  <updated>2013-04-27T21:58:18-07:00</updated>
+  <updated>2013-04-28T10:47:32-07:00</updated>
   <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
