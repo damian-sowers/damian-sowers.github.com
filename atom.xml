@@ -4,7 +4,7 @@
   <title><![CDATA[Damian Sowers]]></title>
   <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
   <link href="http://blog.appraptor.com/"/>
-  <updated>2013-04-28T14:17:35-07:00</updated>
+  <updated>2013-04-28T15:26:22-07:00</updated>
   <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
@@ -18,7 +18,31 @@
     <link href="http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news/"/>
     <updated>2013-04-28T14:16:00-07:00</updated>
     <id>http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>I recently launched my new consulting site, <a href="http://www.appraptor.com">appraptor</a>. I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours.</p>
+
+<p>The unfortunate thing was my server couldn&#8217;t handle all of that traffic. At the height of the surge, I was seeing 287 concurrent users hitting my site.</p>
+
+<p><img src="http://blog.appraptor.com/images/analytics-shot.png" title="Appraptor Analytics" alt="appraptor" /></p>
+
+<p>I learned a lot about what not to do when developing a site which doesn&#8217;t require dynamic content.</p>
+
+<p>My big mistake was I wasn&#8217;t expecting more than a handful of upvotes on HN so I just put the site on my Linode 512 (512 Mb of RAM). I usually do most of my development in Ruby and Rails and deploy to Heroku but I was lazy and already had a linode setup and configured for PHP. What made the performance infinitely worse was I was using PHP to factor out common code to ease the development process. This site didn&#8217;t have any dynamic content and shouldn&#8217;t have used a server side language at all. A massive performance hit is an unacceptable trade off for ease of development (turns out you can have your cake and eat it too with middleman app. I talk about this below).</p>
+
+<p>During the surge I should have immediately converted the site to static HTML. Instead, I wasted my time trying to optimize the max_clients and the timeout variables in apache.conf. Messing with apache didn&#8217;t help with 287 concurrents.</p>
+
+<p>There were a lot of good suggestions on HN for improving the performance during the surge. Thanks to HN users <a href="https://news.ycombinator.com/user?id=krallin">krallin</a> and <a href="https://news.ycombinator.com/user?id=bradgessler">bradgessler</a> for pointing me to S3, Cloudfront, and Middleman for static site hosting and development workflow.</p>
+
+<p>I&#8217;m now hosting <a href="http://www.appraptor">AppRaptor</a> with an Amazon S3 Bucket and Cloudfront as a CDN. Just for the sake of amusement I did a brief loadtest with blitz.io to see what the performance would be like with this new stack. I did a rush from 1-250 users in 60 seconds and it had 0 errors and 0 timeouts. Screenshot of the test is below:</p>
+
+<p><img src="http://blog.appraptor.com/images/blitz.png" title="blitz load test" alt="blitz test" /></p>
+
+<p>Setting up S3 for static site hosting with Cloudfront was pretty simple. The only gotcha you should be aware of is the bucket will initially interpret your css style sheets as an ocet/stream data type, and consequently your design won&#8217;t show up. You just need to manually go into the properties of those css files and change them to &#8220;text/css&#8221;.</p>
+
+<p>The biggest pain about developing a static site, however, is having to repeat yourself with shared code (headers, footer, etc&#8230;). Turns out a great solution for this problem is <a href="http://middlemanapp.com/">Middleman</a>. With Middleman, you can use all of your favorite dsl&#8217;s, like HAML and SASS. It even allows you to build your site with embedded ruby. When you are ready to deploy your site to your S3 bucket, just type &#8220;middleman build&#8221; and it creates static html for your project. Needless to say, it&#8217;s pretty sweet for optimizing your workflow.</p>
+
+<p>Of course, this stack will not work if you have a site that requires dynamic content. But if you want to survive a massive HN surge with a static site, I highly recommend this approach.</p>
+
+<p>Thanks to HN for all of the great comments and critique on my new consulting site, <a href="http://www.appraptor.com">AppRaptor</a>!</p>
 ]]></content>
   </entry>
   
