@@ -4,7 +4,7 @@
   <title><![CDATA[Damian Sowers]]></title>
   <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
   <link href="http://blog.appraptor.com/"/>
-  <updated>2013-04-28T10:47:32-07:00</updated>
+  <updated>2013-04-28T14:17:35-07:00</updated>
   <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
@@ -14,11 +14,22 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hello World]]></title>
+    <title type="html"><![CDATA[Making a site that can handle #1 on Hacker News]]></title>
+    <link href="http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news/"/>
+    <updated>2013-04-28T14:16:00-07:00</updated>
+    <id>http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Moving from Tumblr to Octopress]]></title>
     <link href="http://blog.appraptor.com/blog/2013/04/27/hello-world/"/>
     <updated>2013-04-27T15:19:00-07:00</updated>
     <id>http://blog.appraptor.com/blog/2013/04/27/hello-world</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>I&#8217;m changing my blogging engine from tumblr to octopress because, quite frankly, I am bored with tumblr. Octopress is pretty cool. This blog is being deployed to Github pages, which is great for handling traffic spikes. Many thanks to <a href="https://twitter.com/DruRly">Dru Riley</a> for pointing me to this nice octopress theme. It&#8217;s much better than the default, in my opinion.</p>
+
+<p>If you want to see my old blog posts, they can be found on <a href="http://blog.3solarmasses.com">3solarmasses</a>.</p>
 ]]></content>
   </entry>
   
