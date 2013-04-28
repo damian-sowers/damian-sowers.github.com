@@ -1,2 +1,6 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
+$header-bg: #efefef !default;
+$header-border: lighten($header-bg, 15) !default;
+$title-color: #333 !default;
+$subtitle-color: #777 !default;
