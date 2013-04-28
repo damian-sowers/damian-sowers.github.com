@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[AppRaptor Blog]]></title>
-  <link href="http://damian-sowers.github.io/atom.xml" rel="self"/>
-  <link href="http://damian-sowers.github.io/"/>
-  <updated>2013-04-27T21:45:36-07:00</updated>
-  <id>http://damian-sowers.github.io/</id>
+  <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
+  <link href="http://blog.appraptor.com/"/>
+  <updated>2013-04-27T21:58:18-07:00</updated>
+  <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
-    <link href="http://damian-sowers.github.io/blog/2013/04/27/hello-world/"/>
+    <link href="http://blog.appraptor.com/blog/2013/04/27/hello-world/"/>
     <updated>2013-04-27T15:19:00-07:00</updated>
-    <id>http://damian-sowers.github.io/blog/2013/04/27/hello-world</id>
+    <id>http://blog.appraptor.com/blog/2013/04/27/hello-world</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>

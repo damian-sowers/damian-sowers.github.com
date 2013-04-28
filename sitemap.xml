@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://damian-sowers.github.io/blog/2013/04/27/hello-world/</loc>
+        <loc>http://blog.appraptor.com/blog/2013/04/27/hello-world/</loc>
         <lastmod>2013-04-27T15:19:34-07:00</lastmod>
     </url>
     <url>
-        <loc>http://damian-sowers.github.io/blog/archives/</loc>
+        <loc>http://blog.appraptor.com/blog/archives/</loc>
         <lastmod>2013-04-27T15:19:34-07:00</lastmod>
     </url>
     <url>
-        <loc>http://damian-sowers.github.io/</loc>
+        <loc>http://blog.appraptor.com/</loc>
         <lastmod>2013-04-27T15:19:34-07:00</lastmod>
     </url>
     <url>
-        <loc>http://damian-sowers.github.io/robots.txt</loc>
+        <loc>http://blog.appraptor.com/robots.txt</loc>
         <lastmod>2013-04-27T14:39:18-07:00</lastmod>
     </url>
 </urlset>
