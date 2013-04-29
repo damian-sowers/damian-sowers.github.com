@@ -4,7 +4,7 @@
   <title><![CDATA[Damian Sowers]]></title>
   <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
   <link href="http://blog.appraptor.com/"/>
-  <updated>2013-04-28T15:35:22-07:00</updated>
+  <updated>2013-04-28T19:07:33-07:00</updated>
   <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
@@ -18,7 +18,7 @@
     <link href="http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news/"/>
     <updated>2013-04-28T14:16:00-07:00</updated>
     <id>http://blog.appraptor.com/blog/2013/04/28/making-a-site-that-can-handle-number-1-on-hacker-news</id>
-    <content type="html"><![CDATA[<p>I recently launched my new consulting site, <a href="http://www.appraptor.com">appraptor</a>. I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours.</p>
+    <content type="html"><![CDATA[<p>I recently launched my new consulting site, <a href="http://www.appraptor.com">AppRaptor</a>. I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours.</p>
 
 <p>The unfortunate thing was my server couldn&#8217;t handle all of that traffic. At the height of the surge, I was seeing 287 concurrent users hitting my site.</p>
 
@@ -36,9 +36,9 @@
 
 <p><img src="http://blog.appraptor.com/images/blitz.png" title="blitz load test" alt="blitz test" /></p>
 
-<p>Setting up S3 for static site hosting with Cloudfront was pretty simple. The only gotcha you should be aware of is the bucket will initially interpret your css style sheets as an ocet/stream data type, and consequently your design won&#8217;t show up. You just need to manually go into the properties of those css files and change them to &#8220;text/css&#8221;.</p>
+<p>Setting up S3 for static site hosting with Cloudfront was pretty simple. The only gotcha you should be aware of is the bucket will initially interpret your css style sheets as an octet/stream data type, and consequently your design won&#8217;t show up. You just need to manually go into the properties of those css files and change them to &#8220;text/css&#8221;.</p>
 
-<p>The biggest pain about developing a static site, however, is having to repeat yourself with shared code (headers, footer, etc&#8230;). Turns out a great solution for this problem is <a href="http://middlemanapp.com/">Middleman</a>. With Middleman, you can use all of your favorite dsl&#8217;s, like HAML and SASS. It even allows you to build your site with embedded ruby. When you are ready to deploy your site to your S3 bucket, just type &#8220;middleman build&#8221; and it creates static html for your project. Needless to say, it&#8217;s pretty sweet for optimizing your workflow.</p>
+<p>The biggest pain about developing a static site, however, is having to repeat yourself with shared code (headers, footer, etc&#8230;). Turns out a great solution for this problem is <a href="http://middlemanapp.com/">Middleman</a>. With Middleman, you can use all of your favorite dsl&#8217;s, like HAML and SASS. It even allows you to build your site with embedded ruby. When you&#8217;re ready to deploy your site to your S3 bucket, just type &#8220;middleman build&#8221; and it creates static html for your project. Needless to say, it&#8217;s pretty sweet for optimizing your workflow.</p>
 
 <p>Of course, this stack will not work if you have a site that requires dynamic content. But if you want to survive a massive HN surge with a static site, I highly recommend this approach.</p>
 
