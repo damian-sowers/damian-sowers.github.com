@@ -115,8 +115,6 @@
 
 <p>The unfortunate thing was my server couldn&#8217;t handle all of that traffic. At the height of the surge, I was seeing 287 concurrent users hitting my site.</p>
 
-<p><img src="/images/analytics-shot.png" title="Appraptor Analytics" alt="appraptor" /></p>
-
 <p>I learned a lot about what not to do when developing a site which doesn&#8217;t require dynamic content.</p>
 
 <p>My big mistake was I wasn&#8217;t expecting more than a handful of upvotes on HN so I just put the site on my Linode 512 (512 Mb of RAM). I usually do most of my development in Ruby and Rails and deploy to Heroku but I was lazy and already had a linode setup and configured for PHP. What made the performance infinitely worse was I was using PHP to factor out common code to ease the development process. This site didn&#8217;t have any dynamic content and shouldn&#8217;t have used a server side language at all. A massive performance hit is an unacceptable trade off for ease of development (turns out you can have your cake and eat it too with middleman app. I talk about this below).</p>

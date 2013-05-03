@@ -4,7 +4,7 @@
   <title><![CDATA[Damian Sowers]]></title>
   <link href="http://blog.appraptor.com/atom.xml" rel="self"/>
   <link href="http://blog.appraptor.com/"/>
-  <updated>2013-04-28T19:07:33-07:00</updated>
+  <updated>2013-05-02T18:47:19-07:00</updated>
   <id>http://blog.appraptor.com/</id>
   <author>
     <name><![CDATA[Damian Sowers]]></name>
@@ -21,8 +21,6 @@
     <content type="html"><![CDATA[<p>I recently launched my new consulting site, <a href="http://www.appraptor.com">AppRaptor</a>. I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours.</p>
 
 <p>The unfortunate thing was my server couldn&#8217;t handle all of that traffic. At the height of the surge, I was seeing 287 concurrent users hitting my site.</p>
-
-<p><img src="http://blog.appraptor.com/images/analytics-shot.png" title="Appraptor Analytics" alt="appraptor" /></p>
 
 <p>I learned a lot about what not to do when developing a site which doesn&#8217;t require dynamic content.</p>
 
