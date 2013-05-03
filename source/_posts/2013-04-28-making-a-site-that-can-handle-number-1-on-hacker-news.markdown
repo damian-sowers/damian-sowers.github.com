@@ -6,11 +6,9 @@ comments: true
 categories: 
 ---
 
-I recently launched my new consulting site, [appraptor](http://www.appraptor.com). I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours. 
+I recently launched my new consulting site, [AppRaptor](http://www.appraptor.com). I was completely surprised to see it vault all the way to #1 on Hacker News and stay there for a couple hours. 
 
 The unfortunate thing was my server couldn't handle all of that traffic. At the height of the surge, I was seeing 287 concurrent users hitting my site. 
-
-![appraptor](/images/analytics-shot.png "Appraptor Analytics")
 
 I learned a lot about what not to do when developing a site which doesn't require dynamic content.
 
@@ -24,9 +22,9 @@ I'm now hosting [AppRaptor](http://www.appraptor) with an Amazon S3 Bucket and C
 
 ![blitz test](/images/blitz.png "blitz load test")
 
-Setting up S3 for static site hosting with Cloudfront was pretty simple. The only gotcha you should be aware of is the bucket will initially interpret your css style sheets as an ocet/stream data type, and consequently your design won't show up. You just need to manually go into the properties of those css files and change them to "text/css".
+Setting up S3 for static site hosting with Cloudfront was pretty simple. The only gotcha you should be aware of is the bucket will initially interpret your css style sheets as an octet/stream data type, and consequently your design won't show up. You just need to manually go into the properties of those css files and change them to "text/css".
 
-The biggest pain about developing a static site, however, is having to repeat yourself with shared code (headers, footer, etc...). Turns out a great solution for this problem is [Middleman](http://middlemanapp.com/). With Middleman, you can use all of your favorite dsl's, like HAML and SASS. It even allows you to build your site with embedded ruby. When you are ready to deploy your site to your S3 bucket, just type "middleman build" and it creates static html for your project. Needless to say, it's pretty sweet for optimizing your workflow.
+The biggest pain about developing a static site, however, is having to repeat yourself with shared code (headers, footer, etc...). Turns out a great solution for this problem is [Middleman](http://middlemanapp.com/). With Middleman, you can use all of your favorite dsl's, like HAML and SASS. It even allows you to build your site with embedded ruby. When you're ready to deploy your site to your S3 bucket, just type "middleman build" and it creates static html for your project. Needless to say, it's pretty sweet for optimizing your workflow.
 
 Of course, this stack will not work if you have a site that requires dynamic content. But if you want to survive a massive HN surge with a static site, I highly recommend this approach.
 
